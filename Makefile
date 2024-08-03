@@ -92,6 +92,7 @@ endif
 ifneq (,$(findstring unix,$(platform)))
    TARGET := $(TARGET_NAME)_libretro.so
    LDFLAGS += -shared -Wl,--version-script=$(LIBRETRO_DIR)/link.T -Wl,--no-undefined
+   PLATCFLAGS = -DHAVE_UNISTD_H=1
 
    ifeq ($(FORCE_GLES),1)
       GLES = 1
