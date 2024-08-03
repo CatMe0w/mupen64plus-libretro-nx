@@ -133,6 +133,10 @@ ifneq (,$(findstring unix,$(platform)))
       endif
    endif
 
+   ifneq (,$(findstring riscv,$(platform)))
+      WITH_DYNAREC =
+   endif
+
 # Raspberry Pi
 else ifneq (,$(findstring rpi,$(platform)))
    TARGET := $(TARGET_NAME)_libretro.so
