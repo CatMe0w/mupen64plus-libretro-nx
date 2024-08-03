@@ -133,7 +133,7 @@ ifneq (,$(findstring unix,$(platform)))
       endif
    endif
 
-   ifneq (,$(findstring riscv,$(platform)))
+   ifneq (,$(findstring riscv,$(ARCH)))
       PLATCFLAGS += -DNO_ASM
    endif
 
