@@ -134,7 +134,7 @@ ifneq (,$(findstring unix,$(platform)))
    endif
 
    ifneq (,$(findstring riscv,$(platform)))
-      WITH_DYNAREC =
+      PLATCFLAGS += -DNO_ASM
    endif
 
 # Raspberry Pi
